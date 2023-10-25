@@ -1,10 +1,10 @@
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-import { resizeImage } from '@starter-kit/utils/image';
 import Link from 'next/link';
 import { PublicationNavbarItem } from '../generated/graphql';
-import { Button } from './button';
 import { Container } from './container';
 import { useAppContext } from './contexts/appContext';
+import Image from 'next/image';
+import logo from '../assets/logo.png'
 
 function hasUrl(
 	navbarItem: PublicationNavbarItem,
@@ -71,43 +71,40 @@ export const Header = () => {
 	);
 
 	return (
-		<header className="border-b bg-slate-950 py-10 dark:border-neutral-800 dark:bg-neutral-900">
-			<Container className="grid grid-cols-4 gap-5 px-5">
-				<div className="col-span-2 flex flex-1 flex-row items-center gap-2 lg:col-span-1">
-					{/* <div className="lg:hidden">
-            <Button
-              type="outline"
-              label=""
-              icon={<HamburgerSVG className="w-5 h-5 stroke-current" />}
-              className="!px-3 !py-2 text-white border-transparent rounded-xl hover:bg-neutral-800"
-            />
-          </div> */}
-					<h1>
-						<Link
-							href={'/'}
-							aria-label={`${publication.title} blog home page`}
-							className="flex flex-row items-center gap-3"
-						>
-							{PUBLICATION_LOGO ? (
-								<>
-									<img
-										className="block w-32 shrink-0 md:w-40"
-										alt={publication.title}
-										src={resizeImage(PUBLICATION_LOGO, { w: 320, h: 80 })}
-									/>
-									<span className="text-xl font-semibold text-white md:text-3xl">Blog</span>
-								</>
-							) : (
-								<span className="text-xl font-semibold text-white md:text-4xl">
-									{publication.title}
-								</span>
-							)}
-						</Link>
-					</h1>
+		<header className="">
+			<nav className="  p-4 md:px-40 flex flex-row items-center">
+				<Link href="/" >
+					<div className="flex items-center cursor-pointer">
+						<div className="w-6 h-6 m-1 border-2 border-white rounded-full">
+							<Image src={logo} alt="logo" />
+
+						</div>
+						<h2 className="md:text-xl text-lg px-2 ">
+							Tabwave
+						</h2>
+					</div>
+				</Link>
+
+				<div className="flex  md:text-lg text-sm flex-row items-center ml-auto mr-2 ">
+					<Link href="https://tabwave.app/about" >
+						<span className="m-2  cursor-pointer hover:text-pink-400  ">About</span>
+					</Link>
+
+					<Link href="https://tabwave.app/blog/tag/changelog" >
+						<span className="m-2  cursor-pointer  hover:text-pink-400">What's new</span>
+					</Link>
+					<Link href="/" >
+						<span className="m-2  cursor-pointer hover:text-pink-400  ">Blog</span>
+					</Link>
+
+
+
 				</div>
+			</nav>
+			<Container className="grid grid-cols-4 gap-5 px-5">
+
 				<div className="col-span-2 flex flex-row items-center justify-end gap-5 text-slate-300 lg:col-span-3">
 					<nav className="hidden lg:block">{navList}</nav>
-					<Button href={baseUrl} as="a" type="primary" label="Book a demo" />
 				</div>
 			</Container>
 		</header>

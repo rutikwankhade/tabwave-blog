@@ -24,20 +24,20 @@ export const Footer = () => {
 						<span className="font-semibold text-gray-200">Resources</span>
 						<nav className="list-none text-gray-400 ">
 							<li className="my-1 hover:text-gray-100">
-								<Link href="/about">About</Link>
+								<Link href="https://tabwave.app/about">About</Link>
 							</li>
 							<li className="my-1 hover:text-gray-100">
-								<Link href="/blog">Blog</Link>
+								<Link href="/">Blog</Link>
 							</li>
 							<li className="my-1 hover:text-gray-100">
-								<Link href="/blog/tag/changelog"><div className="cursor-pointer">Changelog <span className="text-xs mx-2 text-white bg-pink-500 px-4 p-1 rounded-lg">New</span></div></Link>
+								<Link href="https://tabwave.app/blog/tag/changelog"><div className="cursor-pointer">Changelog <span className="text-xs mx-2 text-white bg-pink-500 px-4 p-1 rounded-lg">New</span></div></Link>
 							</li>
 							<li className="my-1 hover:text-gray-100">
 								<a href="https://tally.so/r/wA77XW" target="_blank" rel="noreferrer">Feedback</a>
 							</li>
 
 							<li className="my-1 hover:text-gray-100">
-								<Link href="/faq">FAQ</Link>
+								<Link href="ttps://tabwave.app/faq">FAQ</Link>
 							</li>
 
 						</nav>
@@ -66,7 +66,6 @@ export const Footer = () => {
 
 						</nav>
 					</div>
-
 
 				</div>
 
