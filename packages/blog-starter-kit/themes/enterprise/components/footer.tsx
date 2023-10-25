@@ -50,9 +50,7 @@ export const Footer = () => {
 							<div className="text-gray-400">
 
 								<li className="my-1 hover:text-gray-100">
-									<button onClick={() => window.open('https://web.tabwave.app', '_blank', "width=1300, height=700", 'toolbar=0,location=0,menubar=0')} >
-										Web app
-									</button>
+									<a href="https://web.tabwave.app" target="_blank" rel="noreferrer">Web app</a>
 								</li>
 
 								<li className="my-1 hover:text-gray-100">
