@@ -91,7 +91,7 @@ export const Header = () => {
 					</Link>
 
 					<Link href="https://tabwave.app/blog/tag/changelog" >
-						<span className="m-2  cursor-pointer  hover:text-pink-400">What's new</span>
+						<span className="m-2  cursor-pointer  hover:text-pink-400">changelog</span>
 					</Link>
 					<Link href="/" >
 						<span className="m-2  cursor-pointer hover:text-pink-400  ">Blog</span>
