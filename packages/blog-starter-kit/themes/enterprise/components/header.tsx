@@ -71,36 +71,34 @@ export const Header = () => {
 	);
 
 	return (
-		<header className="">
-			<nav className="  p-4 md:px-40 flex flex-row items-center">
-				<Link href="/" >
-					<div className="flex items-center cursor-pointer">
-						<div className="w-6 h-6 m-1 border-2 border-white rounded-full">
-							<Image src={logo} alt="logo" />
+		<header className="p-2">
+            <nav className="border bg-white  md:rounded-full md:m-2 text-gray-800 border-gray-50   p-2 md:w-8/12 md:mx-auto flex flex-row items-center">
+                <Link href="https://tabwave.app" >
+                    <div className="flex items-center cursor-pointer">
+                        <div className="w-6 h-6 m-1 border-2 border-white rounded-full">
+                            <Image src={logo} alt="logo" />
 
-						</div>
-						<h2 className="md:text-xl text-lg px-2 ">
-							Tabwave
-						</h2>
-					</div>
-				</Link>
+                        </div>
+                        <span className="md:text-lg font-manrope font-semibold text-lg px-2  ">
+                            Tabwave
+                        </span>
+                    </div>
+                </Link>
 
-				<div className="flex  md:text-lg text-sm flex-row items-center ml-auto mr-2 ">
-					<Link href="https://tabwave.app/about" >
-						<span className="m-2  cursor-pointer hover:text-pink-400  ">About</span>
-					</Link>
+                <div className="flex font-medium  md:text-lg text-sm flex-row items-center ml-auto mr-2 ">
+                    <Link href="/about" >
+                        <span className="m-2  cursor-pointer hover:text-pink-400  ">About</span>
+                    </Link>
 
-					<Link href="https://tabwave.app/blog/tag/changelog" >
-						<span className="m-2  cursor-pointer  hover:text-pink-400">changelog</span>
-					</Link>
-					<Link href="/" >
-						<span className="m-2  cursor-pointer hover:text-pink-400  ">Blog</span>
-					</Link>
-
-
-
-				</div>
-			</nav>
+                    <Link href="/blog/tag/changelog" >
+                        <span className="m-2  cursor-pointer  hover:text-pink-400">What's new</span>
+                    </Link>
+                    <Link href="/blog" >
+                        <span className="m-2  cursor-pointer hover:text-pink-400  ">Blog</span>
+                    </Link>
+                </div>
+            </nav>
+        
 			<Container className="grid grid-cols-4 gap-5 px-5">
 
 				<div className="col-span-2 flex flex-row items-center justify-end gap-5 text-slate-300 lg:col-span-3">
