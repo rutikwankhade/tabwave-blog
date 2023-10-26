@@ -12,7 +12,7 @@ export const Layout = ({ children }: Props) => {
 		<>
 			<Meta />
 			<Scripts />
-			<div className="min-h-screen">
+			<div className="min-h-screen ">
 				<main>{children}</main>
 			</div>
 			<Analytics />
