@@ -59,9 +59,9 @@ export const SubscribeForm = () => {
 				</div>
 			)}
 			{status === 'PENDING' && (
-				<div className="relative w-full p-2 text-center">
+				<div className="relative w-full  text-center">
 					<p className="font-bold text-green-600 dark:text-green-500">Almost there!</p>
-					<p className="font-medium text-slate-600 dark:text-neutral-300">
+					<p className="font-medium text-sm border bg-purple-200 border-purple-300 rounded-xl p-4 mt-2 text-slate-700 ">
 						Check your inbox for a confirmation email and click{' '}
 						<strong>&quot;Confirm and Subscribe&quot;</strong> to complete your subscription. Thanks
 						for joining us!
