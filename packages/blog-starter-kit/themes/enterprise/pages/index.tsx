@@ -17,6 +17,8 @@ import { Layout } from '../components/layout';
 import { MorePosts } from '../components/more-posts';
 import { Navbar } from '../components/navbar';
 import { SecondaryPost } from '../components/secondary-post';
+import { NoteCard } from '../components/note-card';
+
 import {
 	MorePostsByPublicationDocument,
 	MorePostsByPublicationQuery,
@@ -66,9 +68,9 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 	};
 
 	const firstPost = allPosts[0];
-	const secondaryPosts = allPosts.slice(1, 3).map((post) => {
+	const secondaryPosts = allPosts.slice(0, 3).map((post) => {
 		return (
-			<SecondaryPost
+			<NoteCard
 				key={post.id}
 				title={post.title}
 				coverImage={
@@ -131,8 +133,8 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 						</div>
 					)}
 
-					<div className="grid items-start gap-6 xl:grid-cols-2">
-						<div className="col-span-1">
+					<div className="grid items-start gap-4 w-max grid-cols-1 lg:grid-cols-3 mx-auto">
+						{/* <div className="col-span-1">
 							{firstPost && (
 								<HeroPost
 									title={firstPost.title}
@@ -145,8 +147,8 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 									excerpt={firstPost.brief}
 								/>
 							)}
-						</div>
-						<div className="col-span-1 flex flex-col gap-6">{secondaryPosts}</div>
+						</div> */}
+						{secondaryPosts}
 					</div>
 
 					{/* {allPosts.length > 0 && (
