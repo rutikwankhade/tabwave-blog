@@ -18,17 +18,9 @@ export const PostHeader = ({ title, coverImage, date, author }: Props) => {
 	return (
 		<>
 			<PostTitle>{title}</PostTitle>
-			<div className="hidden w-full flex-row items-center justify-center gap-5 text-slate-700 dark:text-neutral-300 md:flex">
-				<Avatar
-					username={author.username}
-					name={author.name}
-					size={8}
-					picture={author.profilePicture}
-				/>
-				<DateFormatter dateString={date} />
-			</div>
+		
 			{coverImage && (
-				<div className="w-full px-5 sm:mx-0">
+				<div className="md:w-10/12 mx-auto md:px-5 px-3 w-full ">
 					<CoverImage
 						title={title}
 						src={resizeImage(coverImage, { w: 1600, h: 840, c: 'thumb' })}

@@ -117,7 +117,7 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 					/>
 				</Head>
 				<Header />
-				<Container className="flex lg:w-10/12 mx-auto flex-col items-stretch gap-10 p-5 pb-10">
+				<Container className=" bg-pattern flex lg:w-10/12 mx-auto flex-col items-stretch gap-10 p-5 pb-10">
 					{/* <Navbar /> */}
 
 					{allPosts.length === 0 && (
