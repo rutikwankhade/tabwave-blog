@@ -36,15 +36,15 @@ const PostComments = dynamic(() =>
 
 type Props =
 	| {
-			post: PostFullFragment;
-			page: null;
-			publication: PublicationFragment;
-	  }
+		post: PostFullFragment;
+		page: null;
+		publication: PublicationFragment;
+	}
 	| {
-			post: null;
-			page: StaticPageFragment;
-			publication: PublicationFragment;
-	  };
+		post: null;
+		page: StaticPageFragment;
+		publication: PublicationFragment;
+	};
 
 const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 	const highlightJsMonokaiTheme =
@@ -54,9 +54,19 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 		<li key={tag.id}>
 			<Link
 				href={`/tag/${tag.slug}`}
-				className="block rounded-full border px-2 py-1 font-medium   md:px-4"
+				className=""
 			>
-				#{tag.slug}
+
+				<div className='bg-pink-400 hover:bg-pink-500 relative h-10 w-max m-1 justify-center items-center flex'>
+					<span className='mr-10 text-white font-semibold p-2'>
+						#{tag.slug}
+
+					</span>
+
+					<div className="absolute -right-2 border-l-[20px] border-l-transparent -rotate-90 border-b-[35px] border-b-white border-r-[20px] border-r-transparent">
+					</div>
+				</div>
+
 			</Link>
 		</li>
 	));
@@ -67,7 +77,7 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 				<title>{post.seo?.title || post.title}</title>
 				<link rel="canonical" href={post.url} />
 				<meta name="description" content={post.seo?.description || post.subtitle || post.brief} />
-				<meta property="twitter:card" content="summary_large_image"/>
+				<meta property="twitter:card" content="summary_large_image" />
 				<meta property="twitter:title" content={post.seo?.title || post.title} />
 				<meta property="twitter:description" content={post.seo?.description || post.subtitle || post.brief} />
 				<meta
