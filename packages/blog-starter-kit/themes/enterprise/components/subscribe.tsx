@@ -10,19 +10,18 @@ export const Subscribe = () => {
 				<Popover.Trigger asChild>
 					<Button
 						label="Subscribe"
-						type="outline"
 						icon={<NewsletterPlusSVG className="h-5 w-5 fill-current" />}
 						className="bg-white"
 					/>
 				</Popover.Trigger>
 				<Popover.Portal>
 					<Popover.Content
-						className="w-[350px] rounded-xl border bg-white p-5 shadow-xl dark:border-neutral-800 dark:bg-neutral-900 md:w-[500px]"
+						className="w-[350px] rounded-xl border bg-white p-6 shadow-xl "
 						align="end"
-						sideOffset={5}
+						sideOffset={15}
 					>
-						<h3 className="text-primary-600 mb-2 text-center text-base font-semibold">
-							Subscribe to our newsletter for updates and changelog.
+						<h3 className="mb-2 text-center text-md font-semibold">
+						Subscribe to get the latest updates from Tabwave and some productivity tips.
 						</h3>
 						<SubscribeForm />
 					</Popover.Content>

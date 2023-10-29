@@ -35,7 +35,7 @@ export const Button = forwardRef<HTMLButtonElement, Props>(
 
 			default:
 				buttonClassName =
-					'text-white bg-primary-600 hover:bg-primary-500 border-primary-600 dark:bg-primary-600 dark:text-white';
+					'text-white bg-purple-500 hover:bg-purple-600  text-white';
 		}
 
 		if (as === 'a') {
