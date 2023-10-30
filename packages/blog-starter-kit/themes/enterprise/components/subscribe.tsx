@@ -16,7 +16,7 @@ export const Subscribe = () => {
 				</Popover.Trigger>
 				<Popover.Portal>
 					<Popover.Content
-						className="w-[350px] rounded-xl border bg-white p-6 shadow-xl "
+						className="w-[350px] md:max-w-[400px] rounded-xl border bg-white p-6 shadow-xl "
 						align="end"
 						sideOffset={15}
 					>

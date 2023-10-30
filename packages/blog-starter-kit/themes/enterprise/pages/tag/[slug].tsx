@@ -6,6 +6,8 @@ import { Footer } from '../../components/footer';
 import { Header } from '../../components/header';
 import { Layout } from '../../components/layout';
 import { MorePosts } from '../../components/more-posts';
+import Image from 'next/image';
+import pushPin from '../../assets/pushpin.png'
 import {
 	Post,
 	Publication,
@@ -29,10 +31,10 @@ export default function Post({ publication, posts, tag }: Props) {
 					<title>{title}</title>
 				</Head>
 				<Header />
-				<Container className="flex flex-col items-stretch gap-10 px-5 pb-10">
-					<div className="flex flex-col gap-1 pt-5">
-						<p className="font-bold uppercase text-slate-500 dark:text-neutral-400">Tag</p>
-						<h1 className="text-4xl font-bold text-slate-900 dark:text-neutral-50">#{tag}</h1>
+				<Container className="flex bg-pattern flex-col  justify-center items-center gap-10 px-5 pb-10">
+					<div className="flex flex-row gap-2 pt-5">
+						<Image src={pushPin} width={40} height={40} alt="tag" />
+						<h1 className="text-3xl font-dmsans font-bold text-slate-900 ">{tag}</h1>
 					</div>
 					<MorePosts context="tag" posts={posts} />
 				</Container>

@@ -68,7 +68,7 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 	};
 
 	const firstPost = allPosts[0];
-	const secondaryPosts = allPosts.slice(0, 3).map((post) => {
+	const secondaryPosts = allPosts.slice(0, 5).map((post) => {
 		return (
 			<NoteCard
 				key={post.id}
@@ -151,16 +151,18 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 						{secondaryPosts}
 					</div>
 
-					{/* {allPosts.length > 0 && (
-						<div className="bg-primary-50 grid grid-cols-4 rounded-lg px-5 py-5 dark:bg-neutral-900 md:py-10">
+					{allPosts.length > 0 && (
+
+						
+						<div className=" md:w-9/12 mx-auto mt-2 grid grid-cols-4 rounded-lg px-5 py-5 md:py-10">
 							<div className="col-span-full md:col-span-2 md:col-start-2">
-								<h2 className="text-primary-600 dark:text-primary-500 mb-5 text-center text-lg font-semibold">
+								<h2 className=" mb-5 text-center text-xl font-dmsans font-semibold">
 									Subscribe to our newsletter for updates and changelog.
 								</h2>
 								<SubscribeForm />
 							</div>
 						</div>
-					)} */}
+					)}
 
 					{morePosts.length > 0 && (
 						<>
