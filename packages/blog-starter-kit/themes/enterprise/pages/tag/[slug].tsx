@@ -31,7 +31,7 @@ export default function Post({ publication, posts, tag }: Props) {
 					<title>{title}</title>
 				</Head>
 				<Header />
-				<Container className="flex bg-pattern flex-col  justify-center items-center gap-10 px-5 pb-10">
+				<Container className="bg-pattern-square flex flex-col  justify-center items-center gap-10 px-5 pb-10">
 					<div className="flex flex-row gap-2 pt-5">
 						<Image src={pushPin} width={40} height={40} alt="tag" />
 						<h1 className="text-3xl font-dmsans font-bold text-slate-900 ">{tag}</h1>

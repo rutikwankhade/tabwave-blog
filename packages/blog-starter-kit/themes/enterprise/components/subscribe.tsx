@@ -11,7 +11,6 @@ export const Subscribe = () => {
 					<Button
 						label="Subscribe"
 						icon={<NewsletterPlusSVG className="h-5 w-5 fill-current" />}
-						className="bg-white"
 					/>
 				</Popover.Trigger>
 				<Popover.Portal>

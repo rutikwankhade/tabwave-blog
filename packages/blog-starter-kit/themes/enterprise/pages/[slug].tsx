@@ -28,6 +28,8 @@ import {
 	SlugPostsByPublicationQueryVariables,
 	StaticPageFragment,
 } from '../generated/graphql';
+import Image from 'next/image';
+import pushPin from '../assets/pushpin.png'
 
 const Subscribe = dynamic(() => import('../components/subscribe').then((mod) => mod.Subscribe));
 const PostComments = dynamic(() =>
@@ -56,17 +58,15 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 				href={`/tag/${tag.slug}`}
 				className=""
 			>
+				<div className='py-2 px-4 border hover:bg-neutral-100 border-dashed rounded-full w-max m-1 justify-center items-center flex'>
+					
+				<Image src={pushPin} width={20} height={20} alt="tag" />
 
-				<div className='bg-pink-400 hover:bg-pink-500 relative h-10 w-max m-1 justify-center items-center flex'>
-					<span className='mr-10 text-white font-semibold p-2'>
-						#{tag.slug}
+					<span className='ml-2  font-semibold '>
+						{tag.slug}
 
 					</span>
-
-					<div className="absolute -right-2 border-l-[20px] border-l-transparent -rotate-90 border-b-[35px] border-b-white border-r-[20px] border-r-transparent">
-					</div>
 				</div>
-
 			</Link>
 		</li>
 	));

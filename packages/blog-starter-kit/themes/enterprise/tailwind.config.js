@@ -35,6 +35,7 @@ module.exports = {
 			fontFamily: {
                 dmsans: ['DM Sans', 'sans-serif'],
 				nanum: ['Nanum Pen Script', 'sans-serif'],
+				inter: ['Inter', 'sans-serif'],
 
 
       },

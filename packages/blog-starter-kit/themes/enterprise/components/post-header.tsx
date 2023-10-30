@@ -20,7 +20,7 @@ export const PostHeader = ({ title, coverImage, date, author }: Props) => {
 			<PostTitle>{title}</PostTitle>
 		
 			{coverImage && (
-				<div className="md:w-10/12 mx-auto md:px-5 px-3 w-full ">
+				<div className="md:w-8/12 mx-auto md:px-5 px-3 w-full ">
 					<CoverImage
 						title={title}
 						src={resizeImage(coverImage, { w: 1600, h: 840, c: 'thumb' })}
