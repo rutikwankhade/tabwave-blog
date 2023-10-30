@@ -68,7 +68,7 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 	};
 
 	const firstPost = allPosts[0];
-	const secondaryPosts = allPosts.slice(0, 5).map((post) => {
+	const secondaryPosts = allPosts.slice(0, 6).map((post) => {
 		return (
 			<NoteCard
 				key={post.id}
@@ -90,7 +90,7 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 			<Layout>
 				<Head>
 					<title>
-						{publication.displayTitle || publication.title || 'Hashnode Blog Starter Kit'}
+						Tabwave Blog
 					</title>
 					<meta
 						name="description"
@@ -99,7 +99,7 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 						}
 					/>
 					<meta property="twitter:card" content="summary_large_image"/>
-					<meta property="twitter:title" content={publication.displayTitle || publication.title || 'Hashnode Blog Starter Kit'} />
+					<meta property="twitter:title" content='Tabwave Blog' />
 					<meta property="twitter:description" content={publication.descriptionSEO || publication.title || `${publication.author.name}'s Blog`} />
 					<meta
 						property="og:image"
