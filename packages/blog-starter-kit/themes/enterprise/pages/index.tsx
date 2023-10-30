@@ -133,7 +133,7 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 						</div>
 					)}
 
-					<div className="grid items-start gap-4 w-max grid-cols-1 lg:grid-cols-3 mx-auto">
+					<div className="  gap-6 w-max flex flex-wrap justify-center lg:w-10/12  mx-auto ">
 						{/* <div className="col-span-1">
 							{firstPost && (
 								<HeroPost

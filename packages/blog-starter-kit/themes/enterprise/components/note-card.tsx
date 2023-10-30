@@ -18,15 +18,15 @@ export const NoteCard = ({ title, coverImage, date, excerpt, slug }: Props) => {
 	const postURL = `/${slug}`;
 
 	return (
-		<section className="relative  hover:scale-105 duration-300 hover:rotate-3 drop-shadow-lg  font-nanum shadow-slate-500  p-6 bg-pink-300 w-60 h-60  items-start  ">
+		<section className="relative  hover:scale-105 duration-300 hover:rotate-3 drop-shadow-lg hover:drop-shadow-xl  font-nanum shadow-slate-500  p-6 bg-pink-300 w-60 h-60  items-start  ">
 			
             <Link href={postURL}>
 
 			<div className="flex flex-col gap-2">
-				<h1 className="text-3xl   text-slate-800 font-semibold ">
+				<h1 className="text-3xl   text-slate-900 font-medium ">
 						{title}
 				</h1>
-				<div className="text-lg mt-2 font-semibold text-slate-700 ">
+				<div className="text-lg mt-2 font-medium text-slate-850 ">
 						<DateFormatter dateString={date} />
 				</div>
 			</div>
