@@ -83,7 +83,7 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 			/>
 		);
 	});
-	const morePosts = allPosts.slice(4);
+	const morePosts = allPosts.slice(6);
 
 	return (
 		<AppProvider publication={publication}>
@@ -133,7 +133,7 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 						</div>
 					)}
 
-					<div className="  gap-6 w-max flex flex-wrap justify-center lg:w-10/12  mx-auto ">
+					<div className="  gap-6 w-full flex flex-wrap justify-center lg:w-10/12  mx-auto ">
 						{/* <div className="col-span-1">
 							{firstPost && (
 								<HeroPost
