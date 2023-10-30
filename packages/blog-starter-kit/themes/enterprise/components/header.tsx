@@ -71,15 +71,17 @@ export const Header = () => {
 	);
 
 	return (
-		<header className="p-2">
+		<header className="">
+        
+		<div className='sticky md:top-2 top-0 z-10'>
             <nav className="border bg-white  md:rounded-full md:m-2 text-gray-800 border-gray-50   p-2 md:w-8/12 md:mx-auto flex flex-row items-center">
-                <Link href="https://tabwave.app" >
+                <Link href="/" >
                     <div className="flex items-center cursor-pointer">
                         <div className="w-6 h-6 m-1 border-2 border-white rounded-full">
                             <Image src={logo} alt="logo" />
 
                         </div>
-                        <span className="md:text-lg font-manrope font-semibold text-lg px-2  ">
+                        <span className="md:text-lg font-dmsans font-semibold text-lg px-2  ">
                             Tabwave
                         </span>
                     </div>
@@ -91,14 +93,14 @@ export const Header = () => {
                     </Link>
 
                     <Link href="/blog/tag/changelog" >
-                        <span className="m-2  cursor-pointer  hover:text-pink-400">Changelog</span>
+                        <span className="m-2  cursor-pointer  hover:text-pink-400">What's new</span>
                     </Link>
                     <Link href="/blog" >
                         <span className="m-2  cursor-pointer hover:text-pink-400  ">Blog</span>
                     </Link>
                 </div>
             </nav>
-        
+        </div>
 			<Container className="grid grid-cols-4 gap-5 px-5">
 
 				<div className="col-span-2 flex flex-row items-center justify-end gap-5 text-slate-300 lg:col-span-3">
