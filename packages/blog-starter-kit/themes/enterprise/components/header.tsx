@@ -91,7 +91,7 @@ export const Header = () => {
                     </Link>
 
                     <Link href="/blog/tag/changelog" >
-                        <span className="m-2  cursor-pointer  hover:text-pink-400">What's new</span>
+                        <span className="m-2  cursor-pointer  hover:text-pink-400">Changelog</span>
                     </Link>
                     <Link href="/blog" >
                         <span className="m-2  cursor-pointer hover:text-pink-400  ">Blog</span>
