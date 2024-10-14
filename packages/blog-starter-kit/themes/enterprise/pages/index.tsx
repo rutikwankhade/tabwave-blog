@@ -17,7 +17,7 @@ import { Layout } from '../components/layout';
 import { MorePosts } from '../components/more-posts';
 import { Navbar } from '../components/navbar';
 import { SecondaryPost } from '../components/secondary-post';
-import { NoteCard } from '../components/note-card';
+import { BlogCard } from '../components/blog-card';
 
 import {
 	MorePostsByPublicationDocument,
@@ -70,7 +70,7 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 	const firstPost = allPosts[0];
 	const secondaryPosts = allPosts.slice(0, 6).map((post) => {
 		return (
-			<NoteCard
+			<BlogCard
 				key={post.id}
 				title={post.title}
 				coverImage={
@@ -117,11 +117,11 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 					/>
 				</Head>
 				<Header />
-				<Container className=" bg-pattern-square flex lg:w-10/12 mx-auto flex-col items-stretch gap-10 p-5 pb-10">
+				<Container className="  flex lg:w-10/12 mx-auto flex-col items-stretch gap-10 p-5 pb-10">
 					{/* <Navbar /> */}
 
 					{allPosts.length === 0 && (
-						<div className="grid grid-cols-1 py-20 lg:grid-cols-3">
+						<div className="flex flex-col md:flex-row flex-wrap">
 							<div className="col-span-1 flex flex-col items-center gap-5 text-center text-slate-700 dark:text-neutral-400 lg:col-start-2">
 								<div className="w-20">
 									<ArticleSVG clasName="stroke-current" />
