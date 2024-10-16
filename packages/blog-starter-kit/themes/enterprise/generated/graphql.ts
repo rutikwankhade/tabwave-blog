@@ -914,6 +914,12 @@ export type CreateDocumentationLinkInput = {
   label: Scalars['String']['input'];
   projectId: Scalars['ID']['input'];
   url: Scalars['String']['input'];
+  /**
+   * The slug of the version the new link should be created in.
+   *
+   * Defaults to the default version slug.
+   */
+  versionSlug?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type CreateDocumentationLinkPayload = {
@@ -934,6 +940,12 @@ export type CreateDocumentationPageDraftInput = {
   /** The slug of the path used to generate the path. */
   slug?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  /**
+   * The slug of the version the new page should be created in.
+   *
+   * Defaults to the default version slug.
+   */
+  versionSlug?: InputMaybe<Scalars['String']['input']>;
   /** The visibility of the page. */
   visibility?: InputMaybe<DocumentationSidebarItemVisibility>;
 };
@@ -990,6 +1002,12 @@ export type CreateDocumentationSectionInput = {
   projectId: Scalars['ID']['input'];
   /** The slug of the section used to generate the path. */
   slug?: InputMaybe<Scalars['String']['input']>;
+  /**
+   * The slug of the version the new section should be created in.
+   *
+   * Defaults to the default version slug.
+   */
+  versionSlug?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type CreateDocumentationSectionPayload = {
@@ -1320,10 +1338,8 @@ export type DocsVisitors = {
 
 export type DocumentationApiReference = IGuide & {
   __typename?: 'DocumentationApiReference';
-  /** The parsed Swagger Definition of the API Reference. */
-  definition?: Maybe<Scalars['String']['output']>;
   /** The base64 encoded gzip compressed string of the parsed OpenAPI Definition of the API Reference. */
-  definitionV2?: Maybe<Scalars['String']['output']>;
+  definition: Scalars['String']['output'];
   id: Scalars['ID']['output'];
   /**
    * A guide can be locked if the subscription doesn't cover to having this guide.
@@ -1335,6 +1351,7 @@ export type DocumentationApiReference = IGuide & {
   name: Scalars['String']['output'];
   /** OG meta-data of the page. Contains image url used in open graph meta tags. */
   ogMetaData?: Maybe<OpenGraphMetaData>;
+  /** The provider of the guide. */
   provider: GuideProvider;
   /** URL of the published api reference. */
   publishedUrl?: Maybe<Scalars['String']['output']>;
@@ -3073,6 +3090,10 @@ export type Mutation = {
   mapDocumentationProjectCustomDomainWwwRedirect: MapDocumentationProjectCustomDomainWwwRedirectPayload;
   moveDocumentationSidebarItem: MoveDocumentationSidebarItemPayload;
   publishDocumentationApiReference: PublishDocumentationApiReferencePayload;
+  /**
+   * Publishes the default version of the guide.
+   * @deprecated Use `publishDocumentationGuideVersion` instead
+   */
   publishDocumentationGuide: PublishDocumentationGuidePayload;
   publishDocumentationPageDraft: PublishDocumentationPageDraftPayload;
   /** Publishes an existing draft as a post. */

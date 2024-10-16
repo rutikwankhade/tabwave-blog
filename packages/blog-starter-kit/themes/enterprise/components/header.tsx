@@ -92,21 +92,21 @@ export const Header = () => {
                         <span className="m-2  cursor-pointer hover:text-pink-400  ">About</span>
                     </Link>
 
-                    <Link href="/tag/changelog" >
+                    {/* <Link href="/tag/changelog" >
                         <span className="m-2  cursor-pointer  hover:text-pink-400">What&#39;s new</span>
-                    </Link>
+                    </Link> */}
                     <Link href="/" >
                         <span className="m-2  cursor-pointer hover:text-pink-400  ">Blog</span>
                     </Link>
                 </div>
             </nav>
         </div>
-			<Container className="grid grid-cols-4 gap-5 px-5">
+			{/* <Container className="grid grid-cols-4 gap-5 px-5">
 
 				<div className="col-span-2 flex flex-row items-center justify-end gap-5 text-slate-300 lg:col-span-3">
-					<nav className="hidden lg:block">{navList}</nav>
+					<nav className="">{navList}</nav>
 				</div>
-			</Container>
+			</Container> */}
 		</header>
 	);
 };

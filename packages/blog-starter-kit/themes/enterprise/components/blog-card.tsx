@@ -24,7 +24,9 @@ export const BlogCard = ({ title, coverImage, date, excerpt, slug }: Props) => {
             <Link href={postURL}>
 
                 <div className="flex flex-col gap-2">
-                    <img src={coverImage} alt="cover" className="rounded-xl" />
+                    <Image src={coverImage} alt="cover" className="rounded-xl" width={400} height={300} />
+
+
                     <h1 className=" text-xl md:text-2xl pb-4  text-slate-800 font-semibold font-inter tracking-tighter	 ">
                         {title}
                     </h1>
