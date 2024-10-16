@@ -112,13 +112,13 @@ const Post = (publication: PublicationFragment, post: PostFullFragment) => {
 			/>
 			{post.features.tableOfContents.isEnabled && <PostTOC />}
 			<MarkdownToHtml contentMarkdown={post.content.markdown} />
-			{(post.tags ?? []).length > 0 && (
+			{/* {(post.tags ?? []).length > 0 && (
 				<div className="mx-auto w-full px-5 text-slate-600  md:max-w-screen-md">
 					<ul className="flex flex-row flex-wrap items-center gap-2">{tagsList}</ul>
 				</div>
-			)}
+			)} */}
 			{!post.preferences.disableComments && post.comments.totalDocuments > 0 && <PostComments />}
-			<Subscribe />
+			{/* <Subscribe /> */}
 		</>
 	);
 };
@@ -145,7 +145,7 @@ export default function PostOrPage({ publication, post, page }: Props) {
 			<Layout>
 				<Header />
 				<Container className="pt-10">
-					<article className="flex flex-col items-start gap-10 pb-10">
+					<article className="flex flex-col items-start gap-10 pb-20">
 						{post ? Post(publication, post) : Page(page)}
 					</article>
 				</Container>

@@ -98,7 +98,9 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 							publication.descriptionSEO || publication.title || `${publication.author.name}'s Blog`
 						}
 					/>
-					<meta property="twitter:card" content="summary_large_image"/>
+					<link rel="icon" href="/logo.png" />
+
+					<meta property="twitter:card" content="summary_large_image" />
 					<meta property="twitter:title" content='Tabwave Blog' />
 					<meta property="twitter:description" content={publication.descriptionSEO || publication.title || `${publication.author.name}'s Blog`} />
 					<meta
@@ -153,10 +155,10 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 
 					{allPosts.length > 0 && (
 
-						
+
 						<div className=" md:w-9/12 mx-auto mt-2 grid grid-cols-4 rounded-lg px-5 py-5 md:py-10">
 							<div className="col-span-full md:col-span-2 md:col-start-2">
-								<h2 className=" mb-5 text-center text-xl font-dmsans font-semibold">
+								<h2 className=" mb-5 text-center md:text-xl text-lg font-inter text-gray-700">
 									Subscribe to our newsletter for updates and changelog.
 								</h2>
 								<SubscribeForm />
