@@ -19,12 +19,14 @@ export const BlogCard = ({ title, coverImage, date, excerpt, slug }: Props) => {
     const postURL = `/${slug}`;
 
     return (
-        <section className=" hover:scale-105 duration-300   rounded-xl p-2  md:w-4/12 bg-white  ">
 
-            <Link href={postURL}>
+            <Link href={postURL} className=' md:w-4/12 h-72 '>
+
+<section className=" hover:scale-105 duration-300   rounded-xl p-2  bg-white  ">
+
 
                 <div className="flex flex-col gap-2">
-                    <Image src={coverImage} alt="cover" className="rounded-xl" width={400} height={300} />
+                    <img src={coverImage} alt="cover" className="rounded-xl w-full h-48 object-cover" />
 
 
                     <h1 className=" text-xl md:text-2xl pb-4  text-slate-800 font-semibold font-inter tracking-tighter	 ">
@@ -34,9 +36,9 @@ export const BlogCard = ({ title, coverImage, date, excerpt, slug }: Props) => {
 						<DateFormatter dateString={date} />
 				</div> */}
                 </div>
+                </section>
 
             </Link>
 
-        </section>
     );
 };
