@@ -88,7 +88,7 @@ export const Header = () => {
                 </Link>
 
                 <div className="flex font-medium  md:text-lg text-sm flex-row items-center ml-auto mr-2 ">
-                    <Link href="/about" >
+                    <Link href="https://tabwave.app/about" >
                         <span className="m-2  cursor-pointer hover:text-pink-400  ">About</span>
                     </Link>
 
